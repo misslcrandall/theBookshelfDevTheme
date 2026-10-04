@@ -1,0 +1,82 @@
+.social-menu{
+    ul{
+        display: flex;
+        padding: 0;
+        li{
+            background-color: $action1;
+            border-radius: 50%;
+            height: 30px;
+            margin:0.25rem;
+            transition: $animation1;
+            width:30px;
+            &:hover, &:focus, &:active{
+                background-color: $action2;
+                border-color: $action2;
+            }
+            a{
+                align-items: center;
+                color: $white;
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                &:focus, &:active{
+                    background-color: $action2;
+                    border-radius: 50%;
+                }
+                :hover{
+                    border: none;
+                }
+                &.facebook svg{
+                    border-radius: 0;
+                    height: 18px;
+                    left: .5px;
+                    position: relative;
+                    width: 9.64px;
+                }
+                &.instagram svg{
+                    border-radius: 0;
+                    height: 18px;
+                    width: 18px;
+                }
+                &.twitter svg{
+                    border-radius: 0;
+                    height: 15.85;
+                    width: 18px;
+                }
+                &.tiktok svg{
+                    border-radius: 0;
+                    height: 16px;
+                    width: 18px;
+                }
+                &.goodreads svg{
+                    border-radius: 0;
+                    height: 17px;
+                    left: 0px;
+                    top: 1px;
+                    position: relative;
+                    width: 11px;
+                }
+                &.bookbub svg{
+                    border-radius: 0;
+                    height: 13.66px;
+                    width: 20.38px;
+                }
+                &.youtube svg{
+                    border-radius: 0;
+                    height: 14px;
+                    width: 20px;
+                }
+                &.pinterest svg{
+                    border-radius: 0;
+                    height: 15.85;
+                    width: 18px;
+                }
+                &.url-link svg{
+                    border-radius: 0;
+                    height: 15.85;
+                    width: 18px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+body.home {
+    section.tbd-hero div.inner{
+        padding-top: 17.5rem;
+        @include navbreak{
+            padding-top: 7.5rem;
+        }
+    }
+}  
+section.tbd-hero.simple{
+    text-align: center;
+    padding-top: 11.25rem;
+    padding-bottom: 7.5rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    margin-top: 0;
+    h1{
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    &.bottom-padding-default{
+        padding-bottom: 3.75rem;
+    }
+}
+.hero-background-wrap{
+    section.tbd-hero{
+        //min-height: 600px;
+        .inner{
+            @include center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 6.25rem;
+            padding-top: 7.5rem;
+            @include tablet{
+                flex-direction: column;
+            }
+            &.centered{
+                justify-content: center;
+                div.content{
+                    text-align: center;
+                    max-width: 75%;
+                    .button-row{
+                        justify-content: center;
+                    }
+                }
+            }
+            div.content{
+                max-width: 50%;
+                @include tablet{   
+                    max-width: 100%;
+                }
+                h1{
+                    color: $accentColor;
+                    font-weight: 700;
+                    letter-spacing: .3;
+                } p{
+                    color: $text_color;
+                    &.eyebrow{
+                        letter-spacing: .1em;
+                    }
+                }
+                .subheading{
+                    font-size: 1.25rem;
+                    line-height: 1.4;
+                }
+                a.button{
+                    background: transparent;
+                    &:hover{
+                        background: rgba(0, 0, 0, 0.4);
+                    }
+                }
+            }
+            .book-cover{
+                display: flex;
+                justify-content: center;
+                max-width: 50%;
+                margin-left: 5rem;
+                width: 100%;
+                @include tablet{   
+                    margin-left: unset;
+                    max-width: 100%;
+                    margin-top: 2.5rem;
+                }
+                img{
+                    width: auto;
+                    max-height: 500px;
+                    @include tablet {
+                        max-height: 350px;
+                    }
+                }
+            }
+        }
+    }
+    .bottom-wrap{
+        padding-bottom: 5rem;
+    }
+}

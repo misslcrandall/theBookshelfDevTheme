@@ -1,0 +1,55 @@
+footer{
+    background-color: $lightgrey;
+    font-family: $base_font;
+    padding: 1rem 0;
+    div.inner{
+        .social-menu{
+            ul{
+                justify-content: center;
+            }
+        }
+        .footer-menu{
+            ul{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+                @include phone {
+                    flex-direction: column;
+                }
+            }
+            li{
+                a{
+                    color: $text_color;
+                    font-family: $font2;
+                    font-weight: 500;
+                    padding: 0.875rem;
+                    font-size: 1.125rem;
+                    letter-spacing: .1em;
+                    text-transform: uppercase;
+                    //text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+                }
+                @include tablet {
+                    margin:0.5rem;
+                }
+                &:hover{
+                    a{
+                         color: $action1;
+                    }
+                }
+            }
+        }
+        .copyright{
+            color: $text_color;
+            font-family: $font1;
+            font-weight: 400;
+            font-size: 0.875rem;
+            letter-spacing: 1px;
+            text-align: center;
+            @include phone{
+                margin-top: 20px;
+            }
+        }
+    }
+}

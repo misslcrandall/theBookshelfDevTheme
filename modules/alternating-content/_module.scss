@@ -1,0 +1,94 @@
+section.tbd-alternating-content{
+    @include introSection;
+    .inner{
+        @include center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &.row-reverse{
+            flex-direction: row-reverse;
+            @include tablet{
+                flex-direction: column;
+            }
+            .content{
+                max-width: calc(50% - 2.5rem);
+                padding-left: 2.5rem;
+                padding-right: unset;
+                @include tablet{
+                    padding-left: unset;
+                    max-width: 100%;
+                }
+            }
+        }
+        @include tablet{
+            flex-direction: column;
+            &.column{
+                div.media{
+                    margin-top: 1.875rem;
+                }
+            }
+            &.column-reverse{
+                flex-direction: column-reverse;
+                div.media{
+                    margin-bottom: 2.5rem;
+                }
+            }
+        }
+        .content{
+            flex: 0 0 50%;
+            padding-right: 3.75rem;
+            max-width: calc(50% - 3.75rem);
+            h2{
+                margin-bottom: 0.5rem;
+            }
+            @include tablet{
+                padding-right: unset;
+                max-width: 100%;
+            }
+            div.button-row{
+                @include buttonRow;
+            }
+        }
+        div.media{
+            flex: 0 0 50%;
+            max-width: 50%;
+            @include tablet{
+                max-width: 100%;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        &.two-thirds{
+            justify-content: space-between;
+            .content{
+                flex: 0 0 70%;
+                max-width: calc(70% - 3.75rem);
+                @include tablet{
+                    max-width: 100%;
+                }
+            }
+            div.media{
+                flex: 0 0 30%;
+                max-width: calc(30% - 3.75rem);
+                @include tablet{
+                    max-width: 100%;
+                }
+            }
+        }
+        &.centered{
+            display: block;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            .content{
+                flex: 0 0 75%;
+                max-width: 100%;
+                padding: 0px;
+                div.button-row{
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

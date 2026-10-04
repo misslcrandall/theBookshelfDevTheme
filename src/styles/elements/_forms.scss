@@ -1,0 +1,89 @@
+div.wpforms-container-full .wpforms-form input[type=submit], div.wpforms-container-full .wpforms-form button[type=submit], div.wpforms-container-full .wpforms-form .wpforms-page-button {
+ background-color: #eee;
+ border: 1px solid #ddd;
+ color: #333;
+ font-size: 1rem !important;
+}
+
+.wpcf7{
+ font-size: 1.125rem;
+}
+
+form.wpcf7-form{
+    label.title{
+     display: block;
+     font-family: $font1;
+     font-weight: $bold;
+     font-size: 0.875rem;
+     line-height: 0.875rem;
+     letter-spacing: 0.1em;
+     text-transform: uppercase;
+     margin-bottom: -0.75rem;
+ }
+ span.submit{
+     @include button;
+     position: relative;
+     display: flex;
+     width: 200px;
+     padding: 0.3125rem 6.25rem;
+     margin: 0 auto;
+     z-index: 1;
+     @include phone{
+        padding: 0.3125rem 0.625rem;
+    }
+     &::after{
+         z-index: 99;
+     }
+     &::before{
+         z-index: 99;
+     }
+ }
+ input, textarea{
+     color: $text_color;
+     font-family: $base_font;
+     font-size: $base_font_size;
+     font-weight: 300;
+     line-height: $base_line_height;
+     margin: 0rem 0rem 1rem;
+     position: relative;
+ 
+     background: none;
+     border: 1px solid $action2;
+     color: $white;
+     padding: 0.625rem;
+     width: 100%;
+     font-size: 1.0625rem;
+     margin: 10px 0;
+
+     &::placeholder{
+         color: $lightgrey;
+     }
+     &[type="submit"]{
+         appearance: none;
+         border: none;
+         margin: 0 auto;
+         text-align: center;
+         width: 100%;
+         padding: 0.3125rem 6.25rem;
+         z-index: 2;
+         position: absolute;
+         left: 0;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         color: transparent;
+        @include phone{
+            padding: 0.3125rem 0.625rem;
+        }
+     }
+ }
+ .wpcf7-spinner{
+     display: none;
+ }
+ .wpcf7-response-output{
+     border: $action1;
+     font-size: 16px;
+     text-align: center;
+     font-style: italic;
+ }
+}

@@ -1,0 +1,22 @@
+.blog-feed{
+    margin-top: 2.5rem;
+ .container{
+  @include center;
+  display: flex;
+  flex-direction: column;
+   .blog-card{
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto 3.75rem;
+    width: 100%;
+
+    .btn-cta{
+        @include button;
+        margin: 1.25rem;
+    }
+    @include tablet {
+        max-width: unset;
+    }
+   }     
+ }
+}

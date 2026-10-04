@@ -1,0 +1,63 @@
+.tbd-related-books{
+    @include introSection;
+    text-align: center;
+    padding: 3rem;
+    .inner{     
+        .book-slider{
+            @include center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            .book-slider-item{
+                display: flex;
+                margin: 0 auto;
+                max-width: 180px;
+                padding: 1rem;
+                
+                @media only screen and (min-width: 920px){
+                    width: 33%;
+                    max-width: 180px;
+                }
+                img{
+                    border-radius: $border1;
+                    overflow: hidden;
+                    box-shadow: 0 6px 10px rgba(0, 0, 0, .25);
+                }
+                h3{
+                    font-size: 1.25rem;
+                    margin-bottom: 0;
+                    margin-top: 1rem;
+                }
+                a:hover{
+                    text-decoration: none;
+                    h3{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    &.series.image{
+        div.content{
+            padding-left: 50px;
+            .related-books .book-slider .book-slider-item {
+                width: calc(33% - 25px);
+            }
+        }
+        h4{
+            font-size: 1.25rem;
+            margin-bottom: 0;
+            margin-top: 1rem;
+        }
+        @media (max-width: 1020px) {
+            .row{
+                flex-direction: column;
+                align-items: center;
+                div.content{
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}

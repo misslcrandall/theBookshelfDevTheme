@@ -1,0 +1,53 @@
+section.tbd-accordion{
+    @include introSection;
+    .inner{
+        @include center;
+        .accordion-wrap {
+          margin: 0 auto;
+          max-width: 900px;
+          .item{
+            width: 100%;
+            background-color: $lightgrey;
+            padding: 1.25rem;
+            margin-bottom: 1.25rem;
+            .item-header{
+              align-items: center;
+              cursor: pointer;
+              display: flex;
+              justify-content: space-between;
+              padding: 0.625rem 0.3125rem;
+              transition: $animation1;
+              &:hover{
+                h3, svg{
+                  color: $action2;
+                }
+              }
+              h3{
+                margin: 0px;
+              }
+              svg{
+                height: 20px;
+                width: 20px;
+              }
+              &.active{
+                svg{
+                  transform: rotate(180deg);
+                }
+              }
+            }
+           .item-dropdown{
+             display: none;
+             padding: 0.3125rem;
+             p{
+               &:first-child{
+                 margin-top: 0px;
+               }
+               &:last-child{
+                margin-bottom: 0px;
+              }
+             }
+           }
+          }
+        }
+    }
+}

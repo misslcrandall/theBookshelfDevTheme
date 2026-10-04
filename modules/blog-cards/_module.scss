@@ -1,0 +1,66 @@
+section.tbd-recent-posts{
+    @include introSection;
+    .intro-section{
+        padding-bottom: 0.625rem;
+    }
+    .inner{
+        @include center;
+        display: flex;
+        flex-direction: column;
+        .posts{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 3rem;
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+            }
+            a{
+                @include card;
+                width: 30%;
+                @include tablet{
+                    width: unset;
+                }
+                &:hover{
+                    text-decoration: none !important;
+                }
+                .card{
+                    color: $text_color;
+                    height: 100%;
+                    width: 100%;
+                    @include tablet {
+                        margin: 0rem;  
+                    }
+                    @include laptop  {
+                        margin: 0;
+                    }
+                    h3{
+                        margin: 0 0 10px;
+                        text-align: left;
+                    }
+                    p,a{
+                        color: $text_color;
+                    }
+                    .post-date{
+                        text-align: left;
+                        color: $text_color;
+                        margin: 0 0 0.625rem;
+                    }
+                    .post-excerpt{
+                        margin: auto 0;
+                    }
+                    .read-more{
+                        @include textLink;
+                        margin-top: 20px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        a.button{
+            @include button;
+            align-self: center;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+section.tbd-cards{
+    @include introSection;
+    .inner{
+        @include center;
+        .card-wrap{
+            display: flex;
+            margin: 0 -1.25rem;
+            @include tablet{
+                flex-direction: column;
+            }
+            .card{
+                @include card;
+                background: $lightgrey;
+                color: $text_color;
+                flex: 0 1 30%;
+                padding: 36px 20px;
+                text-align: center;
+            }
+            a.card{
+                transition: $animation2;
+                &:hover{
+                    background: rgba(17, 17, 17, 0.6);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@mixin button{
+  background: transparent;
+  border: 3px double $action2;
+  box-sizing: border-box;
+  color: $action1;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: $font1;
+  font-size: 0.875rem;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: .125em;
+  line-height: 2.857em;
+  margin-bottom: 0.5rem;
+  min-width: 100px;
+  padding: 5px 30px 6px;
+  text-transform: uppercase;
+  transition: .2s ease-in-out;
+  position: relative;
+  white-space: nowrap;
+  @include phone {
+    min-width: 180px;
+    width: auto;
+  }
+  &:hover{
+    background: $lightgrey;
+  }
+}
+
+@mixin secondaryButton{
+  border-bottom: 1px solid $action1;
+  box-sizing: border-box;
+  color: $action1;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: $font1;
+  font-size: 0.875rem;
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: .125em;
+  line-height: 2.857em;
+  margin-bottom: 0.5rem;
+  min-width: 100px;
+  padding: 5px 30px 0px;
+  text-transform: uppercase;
+  transition: .2s ease-in-out;
+  position: relative;
+  white-space: nowrap;
+  &:hover{
+      padding: 5px 30px 6px;
+  }
+}
+
+@mixin buttonText{
+
+}
+
+@mixin buttonRow {
+  display: flex;
+  margin-top: 2.5rem;
+  a.button{
+    &:nth-of-type(1){
+      @include button;
+      margin-right: 1.25rem;
+    }
+    &:nth-of-type(2){
+        @include secondaryButton;
+    }
+  }
+
+  @include phone {
+    flex-direction: column;
+    align-items: center;
+  }
+}

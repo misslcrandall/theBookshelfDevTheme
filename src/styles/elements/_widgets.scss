@@ -1,0 +1,10 @@
+.newsletter-widget{
+    background-color: $action1;
+    outline: 3px solid $white;
+    outline-offset: -12px;
+    padding: 0.125rem 1rem;
+    text-align: center;
+    h3{
+        font-style: italic;
+    }
+}

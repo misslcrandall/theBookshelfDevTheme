@@ -1,0 +1,32 @@
+@import '../config/mixins';
+
+.post-type-archive-books, .tax-subjects{
+    .book-container {
+        @include center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .tbd-alternating-content{
+        max-width: 60%;
+        @include tablet{
+            width: 100%;
+        }
+    }
+}
+
+.tax-subjects{
+    .hero{
+        min-height: 200px;
+        h1{
+            margin-bottom: 0;
+        }
+    }
+    .archive-cta{
+        margin: 0.1875rem auto;
+        a{
+            display: flex !important;
+            justify-content: center !important;   
+        }
+    }
+}

@@ -1,0 +1,49 @@
+//------------------------------------------------------------------------
+// VARIABLES
+//------------------------------------------------------------------------
+
+//Import Fonts
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,600;1,300;1,600&display=swap');
+
+$font1: 'Open Sans', sans-serif;
+$font2: 'Cormorant', serif;
+
+$black : #111111;
+$white : #dedede;
+$grey : rgb(102,102,102); //666666
+$darkgrey : #333333;
+$lightgrey : rgb(206,206,206); //cecece
+
+$navy: #12243a;
+$darkTeal : #1A3C49;
+
+$accentColor: $navy;
+
+// Site Colors
+$action1: $navy;
+$action2: #325080;
+$background: $white;
+
+// Typography
+$text_color: $black;
+
+$gradiant1: linear-gradient(180deg, rgba(34, 34, 34, 0.08) 0%, rgba(34, 34, 34, 0.48) 72.92%, rgba(34, 34, 34, 0.8) 100%);
+$gradiant2: linear-gradient(0deg, rgba(103, 127, 170, 0.51) 7.81%, #EEEEEE 92.19%);
+
+$border1 : 0.5rem;
+
+$base_font: $font1;
+$base_font_size: 1.0625rem;
+$base_font_weight: 300;
+$base_line_height: 1.6;
+$bold: 600;
+$heading_font: $font2;
+$heading_color: $text_color; 
+
+// Links
+$link: $action1;
+$link_font_weight: 400;
+$link_hover: $action1;
+
+$animation1: all .2s ease;
+$animation2: all .6s ease;

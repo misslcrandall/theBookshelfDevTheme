@@ -1,0 +1,88 @@
+.button-row{
+    @include buttonRow;
+}
+
+.widget_archive{
+    label{
+        display: none;
+    }
+    select{
+        font-size: 20px;
+        padding: 5px 15px;
+        width: 100%;
+    }
+}
+
+button.slick-arrow{
+    border-radius: 50%;
+    border: none;
+    color: transparent;
+    content: "";
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: $animation1;
+    &::after{
+        background: unset;
+        content: unset;
+    }
+    &::before{
+        background: unset;
+        content: unset;
+    }
+    &:hover{
+        filter: brightness(.8);
+    }
+}
+.slick-prev{
+    left: 0;
+    top: 50%;
+}
+.slick-next {
+    right: 0;
+    top: 50%;
+}
+.slick-prev:before, .slick-next:before {
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    -webkit-font-smoothing: antialiased;
+}
+
+.slick-dots{
+    display: flex;
+    font-size: 0.75rem;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0;
+    li{
+        background-size: contain;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0rem;
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+        &:hover{
+            background-color: $black;
+        }
+        button{
+            background-color: transparent;
+            height: 30px;
+            width: 30px;
+            border: none;
+            color: transparent;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        &.slick-active{
+            background-color: $black;
+            &:hover{
+                button{
+                    cursor: unset;
+                }
+            }
+        }
+    }
+}

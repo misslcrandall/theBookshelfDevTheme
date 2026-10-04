@@ -1,0 +1,12 @@
+body.login, #wp-auth-check{
+ background: url('/wp-content/themes/baker/src/images/background-large-blue-2.jpg');
+}
+.login form{
+ background: rgba(0, 0, 0, 0.6);
+ box-shadow: 0 0 40px 32px rgb(0 0 0 / 60%);
+ border: none;
+ color: white;
+}
+.login #backtoblog a, .login #nav a{
+ color: white;
+}

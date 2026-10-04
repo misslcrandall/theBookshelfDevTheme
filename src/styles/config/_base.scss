@@ -1,0 +1,105 @@
+html {
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+  background-color: $background;
+  color: $text_color;
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: $base_font;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+//Force Footer to bottom on short pages
+header{
+  flex-shrink: 0;
+}
+div.page{
+  //padding-top: 5.625rem;
+}
+.page-content {
+  flex: 1 0 auto;
+}
+section.bottom-padding-none{
+  padding-bottom: 0rem;
+}
+section.top-padding-none{
+  padding-top: 0rem;
+}
+section.bottom-padding-small{
+  padding-bottom: 1.5625rem;
+}
+section.top-padding-small{
+  padding-top: 1.5625rem;
+}
+section.bottom-padding-medium{
+  padding-bottom: 3.125rem;
+}
+section.top-padding-medium{
+  padding-top: 3.125rem;
+}
+section.bottom-padding-large{
+  padding-bottom: 6.25rem;
+}
+section.top-padding-large{
+  padding-top: 6.25rem;
+}
+section.bottom-margin-none{
+  margin-bottom: 0rem;
+}
+section.top-margin-none{
+  margin-top: 0rem;
+}
+section.bottom-margin-default{
+  margin-bottom: 4.6875rem;
+}
+section.top-margin-default{
+  margin-top: 4.6875rem;
+}
+section.bottom-margin-small{
+  margin-bottom: 1.5625rem;
+}
+section.top-margin-small{
+  margin-top: 1.5625rem;
+}
+section.bottom-margin-medium{
+  margin-bottom: 3.125rem;
+}
+section.top-margin-medium{
+  margin-top: 3.125rem;
+}
+section.bottom-margin-large{
+  margin-bottom: 6.25rem;
+}
+section.top-margin-large{
+  margin-top: 6.25rem;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+//Hide Recaptcha Badge
+.grecaptcha-badge { 
+  visibility: hidden !important;
+  opacity: 0;
+}
+
+.wp-block-search__button{
+    @include button;
+    margin-bottom: 0;
+    min-width: unset !important;
+    width: auto;
+}
+
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }

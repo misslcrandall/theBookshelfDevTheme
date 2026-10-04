@@ -1,0 +1,151 @@
+@mixin laptop {
+    @media (max-width: 1200px) {
+        @content; 
+    }
+}
+
+@mixin navbreak {
+    @media (max-width: 1115px) {
+        @content; 
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 720px) {
+        @content; 
+    }
+}
+
+@mixin phone {
+    @media (max-width: 500px) {
+        @content; 
+    }
+}
+
+@mixin textLink{
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    color: $action1;
+    font-family: $font1;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: .125em;
+    line-height: 2.857em;
+    margin-bottom: 0.5rem;
+    min-width: 100px;
+    text-transform: uppercase;
+    transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+    &::after{
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        left: 6px;
+        top: -2px;
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23dab742' viewBox='0 0 320 512'%3E%3Cpath d='M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 12px;
+        height: 12px;
+    }
+    &:hover{
+        color: $link_hover;
+        &::after{
+            left: 10px;
+        }
+    }
+}
+@mixin card{
+    background-color: $lightgrey;
+    border-radius: $border1;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    margin: 20px;
+    overflow: hidden;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p:last-of-type{
+    margin-bottom: 0;
+    }
+}
+
+@mixin darkMode {
+    .darkmode &{
+        background-color: $background;
+        color: $white;
+    }
+    
+}
+
+@mixin center {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 40px;
+}
+
+@mixin form{
+    #mc_embed_signup{
+        width: 100%;
+        form{
+            width: 100%;
+            font-size: 0.75rem;
+            display: flex;
+            #mc_embed_signup_scroll{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: 100%;
+                .indicates-required{
+                    display: none;
+                }
+                .name{
+                    margin-bottom: 1rem;
+                }
+                .mc-field-group{
+                    width: 100%;
+                    label{
+                        display: none;
+                    }
+                    input{
+                        color: $black;
+                        font-size: 1rem;
+                        padding: 0.5rem 1rem;
+                        &::placeholder{
+                            color: $black;
+                        }
+                    }
+                }
+                .button{
+                    @include button;
+                }
+                .brandingLogo{
+                    display: none;
+                }
+                div{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+@mixin introSection {
+    .intro-section{
+        @include center;
+        div.button-row{
+            @include buttonRow;
+            justify-content: center;
+        }
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 2.5rem;
+        p{
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 50rem;
+        }
+    }
+}
