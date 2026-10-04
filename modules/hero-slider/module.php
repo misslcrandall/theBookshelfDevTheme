@@ -29,12 +29,14 @@ $hero_modules = get_field('hero_modules');
 
 //Selects Header Text                
 $hero_text = get_field('hero_text');
-$hero_eyebrow = $hero_text['header_eyebrow'];
-$hero_title = $hero_text['header_heading'];
-$hero_body = $hero_text['header_body'];
+$hero_text = is_array($hero_text) ? $hero_text : [];
+$hero_eyebrow = $hero_text['header_eyebrow'] ?? '';
+$hero_title = $hero_text['header_heading'] ?? '';
+$hero_body = $hero_text['header_body'] ?? '';
 $hero_image = get_field('hero_image');
-$include_image = $hero_image['include_image'];
-$image = $hero_image['image'];
+$hero_image = is_array($hero_image) ? $hero_image : [];
+$include_image = $hero_image['include_image'] ?? false;
+$image = $hero_image['image'] ?? null;
 
 ?>
 <?php if ($simpleHeader != 1):?>
@@ -61,8 +63,8 @@ $image = $hero_image['image'];
                 </div>
                 <?php if( !empty( $include_image ) ): ?>
                     <div class="book-cover">
-                        <?php if( !empty( $image ) ): ?>
-                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <?php if( is_array($image) && !empty($image['url']) ): ?>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt'] ?? ''); ?>" />
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>

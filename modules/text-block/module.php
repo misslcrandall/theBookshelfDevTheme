@@ -11,7 +11,7 @@ include get_stylesheet_directory() . '/modules/_partials/module-settings.php';
     <?php include get_stylesheet_directory() . '/modules/_partials/intro-section.php';?>
     <div class="inner">
         <div <?php if( $shrinkText){ echo 'class="small"';}?>>
-            <?php echo $text; ?>
+            <?php echo esc_html($text); ?>
             <div class="button-row">
                 <?php if( have_rows('cta_buttons') ):
                     while( have_rows('cta_buttons') ) : the_row();?>

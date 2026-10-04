@@ -124,6 +124,9 @@ function wp_admin_setup() {
         else if ( $time < "4" || $time >= "17" ) { $greeting = "Good Evening,"; }
         
         $my_account = $wp_admin_bar->get_node('my-account');
+        if ( ! isset( $my_account->title ) ) {
+            return;
+        }
         $newtext = str_replace( 'Howdy,', $greeting, $my_account->title);
         $wp_admin_bar->add_node( array(
         'id' => 'my-account',

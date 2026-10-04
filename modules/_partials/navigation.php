@@ -1,5 +1,6 @@
 <?php
     $headerCTA = get_field('header_cta', 'options');
+    $headerCTA = is_array($headerCTA) ? $headerCTA : [];
 ?>
 <?php
 /***** CENTERED HEADER WITH SPLIT NAV *****/
@@ -54,20 +55,18 @@
                             'menu_class'=>'mobile-menu'
                         )
                     );
-                    $headerCTA = get_field('header_cta', 'options');
-                    if( $headerCTA['show_cta'] ){ ?>
+                    if( !empty( $headerCTA['show_cta'] ) ){ ?>
                         <div class="mobile-cta">
-                            <a class="button" href="<?php echo $headerCTA['btn_link']; ?>"><?php echo $headerCTA['btn_text']; ?></a>
+                            <a class="button" href="<?php echo esc_url( $headerCTA['btn_link'] ?? '' ); ?>"><?php echo esc_html( $headerCTA['btn_text'] ?? '' ); ?></a>
                         </div>
                     <?php }?>
                 </div>
             </div>
         </div>
         <?php //CTA Button
-        $headerCTA = get_field('header_cta', 'options');
-        if( $headerCTA['show_cta'] ){ ?>
+        if( !empty( $headerCTA['show_cta'] ) ){ ?>
             <div class="cta">
-                <a class="button" href="<?php echo $headerCTA['btn_link']; ?>"><?php echo $headerCTA['btn_text']; ?></a>
+                <a class="button" href="<?php echo esc_url( $headerCTA['btn_link'] ?? '' ); ?>"><?php echo esc_html( $headerCTA['btn_text'] ?? '' ); ?></a>
             </div>
         <?php }?>
     </div>
@@ -116,20 +115,18 @@
                             'menu_class'=>'mobile-menu'
                         )
                     );
-                    $headerCTA = get_field('header_cta', 'options');
-                    if( $headerCTA['show_cta'] ){ ?>
+                      if( !empty( $headerCTA['show_cta'] ) ){ ?>
                         <div class="mobile-cta">
-                            <a class="button" href="<?php echo $headerCTA['btn_link']; ?>"><?php echo $headerCTA['btn_text']; ?></a>
+                              <a class="button" href="<?php echo esc_url( $headerCTA['btn_link'] ?? '' ); ?>"><?php echo esc_html( $headerCTA['btn_text'] ?? '' ); ?></a>
                         </div>
                     <?php }?>
                 </div>
             </div>
         </div>
         <?php //CTA Button
-        $headerCTA = get_field('header_cta', 'options');
-        if( $headerCTA['show_cta'] ){ ?>
+          if( !empty( $headerCTA['show_cta'] ) ){ ?>
             <div class="cta">
-                <a class="button" href="<?php echo $headerCTA['btn_link']; ?>"><?php echo $headerCTA['btn_text']; ?></a>
+                  <a class="button" href="<?php echo esc_url( $headerCTA['btn_link'] ?? '' ); ?>"><?php echo esc_html( $headerCTA['btn_text'] ?? '' ); ?></a>
             </div>
         <?php }?>
     </div>

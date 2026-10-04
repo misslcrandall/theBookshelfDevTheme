@@ -8,7 +8,7 @@ $ctaButtons = get_sub_field('intro_button');
 ?>
 
 <div class="intro-section">
-    <div class="sub-header"><?php echo $eyebrow;?></div>
+    <div class="sub-header"><?php echo esc_html($eyebrow);?></div>
     <h2><?php echo $header; ?></h2>
     <?php if( !empty( $introCopy ) ): ?>
       <?php echo $introCopy; ?>
